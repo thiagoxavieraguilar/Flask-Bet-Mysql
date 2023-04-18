@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Betting Results</title>
+	  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="\static\imgs\bet_ico2.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Apostas feitas</h1>
+		<table>
+			<tr>
+
+				<th>Time</th>
+				<th>Resultado</th>
+				<th>Odd</th>
+			</tr>
+			{% for match in matches_bet %}
+			<tr>
+				
+				<td><img src="{{ url_for('static', filename='imgs/' ~ match[0] ~ '.png') }}">{{ match[0] }}</td>
+				<td>{{ match[1] }}</td>
+				<td>{{ match[2] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		<div class="value-bet">
+			<h3>Valor Apostado: {{ value_bet}}</h3>
+			<p>Odds: {{ odd_final }}</p>
+			<h4>Possíveis ganhos: {{ return_bet}}</h4>
+			<p style="font-size: 10px;">Chave Pix: Thiago Xavier Aguilar</p>
+			<img src="/static/imgs/qr_code.png" alt="QR Code">
+			<h5><a href="https://api.whatsapp.com/send?phone=">Enviar mensagem no WhatsApp</a>
+			</h5>
+		</div>
+	</div>
+</body>
+</html>

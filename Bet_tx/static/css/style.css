@@ -1,0 +1,151 @@
+body {
+    background-color: #152730;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .image-container img {
+    display: inline-block;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 36px;
+    color: #1e5aa7;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 24px;
+    color: #1e5aa7;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    display: block;
+  }
+
+  input[type="radio"] {
+    margin-right: 10px;
+    height: 18px;
+    width: 18px;
+  }
+
+  input[type="text"] {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  button[type="submit"] {
+    background-color: #1e5aa7;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #134580;
+  }
+
+  /* Added code for match boxes */
+  .match-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+  }
+
+  .match-box h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .match-box img {
+    margin: 0 10px;
+  }
+
+  .match-box label {
+    margin-bottom: 5px;
+  }
+
+  .match-box input[type="radio"] {
+    margin: 0;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+  .result {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #CCC;
+    text-align: center;
+}
+
+th {
+    background-color: #F0F0F0;
+}
+
+td {
+    background-color: #FFF;
+    text-align: left;
+    vertical-align: middle;
+}
+
+td img {
+    display: block;
+    margin-right: 10px;
+    float: left;
+    width: 50px;
+    height: auto;
+}
+
+.value-bet {
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}

@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block title %}Bet_Txavier{% endblock %} 
+{% block content%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bet_Txavier</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="\static\imgs\bet_ico2.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+  </head>
+  <body>
+    <div class="image-container">
+      <img src="/static/imgs/logo_bet.png" alt="Logo" width="220" height="200">
+      <img src="/static/imgs/logo_bet.png" alt="Second Image" width="220" height="200">
+      <img src="/static/imgs/logo_bet.png" alt="thid Image" width="220" height="200">
+
+    </div>
+    
+    {% for mesg in get_flashed_messages() %}
+      <h1>{{ mesg }}</h1>
+    {% endfor %}
+      <div class="container">
+      <h1> The House Always Wins.</h1>
+      <div class="row">
+        <form method="post" action="{{ url_for('views.show_results') }}">
+          {% for match in matches %}
+            <div class="col-12 match-box">
+              <h3>
+                <img src="{{ url_for('static', filename='imgs/' ~ match['home_team'] ~ '.png') }}" width="50" height="50">
+                {{ match['home_team'] }} vs {{ match['visit_team'] }}
+                <img src="{{ url_for('static', filename='imgs/' ~ match['visit_team'] ~ '.png') }}" width="50" height="50">
+              </h3>
+              <div>
+                <label>{{ match['home_team'] }}:</label>
+                <input type="radio" name="{{ match['home_team'] }}" value="{{ match['home_team_odds'] }},vitoria"> Vitoria - {{ match['home_team_odds'] }}
+                <br>
+                <input type="radio" name="{{ match['home_team'] }}" value="{{ match['empate_odds'] }},Empate"> Empate - {{ match['empate_odds'] }}
+                <br>
+                <input type="radio" name="{{ match['home_team'] }}" value="{{ match['visit_team_odds'] }},Derrota"> Derrota - {{ match['visit_team_odds'] }}
+              </div>
+            </div>
+          {% endfor %}
+          
+      
+          <br>
+          <label for="Valor aposta">Valor:</label>
+          <br>
+          <input type="text" id="valor" name="valor">
+          <br>
+          <button type="submit">Enviar</button>
+          <script>
+        
+
+          </script>
+        </form>
+      </div>
+    </div>
+    <footer>
+      &copy; 2023 Thiago Xavier
+    </footer>
+  </body>
+</html>
+  {% endblock %}
