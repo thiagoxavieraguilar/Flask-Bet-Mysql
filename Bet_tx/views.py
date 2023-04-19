@@ -1,7 +1,6 @@
 from flask import Flask,render_template, request,session,redirect, url_for, flash, Blueprint
 from flask_login import login_required, current_user
-from . import db
-import json
+from Bet_tx import db
 from .models import User,Bet
 from Bet_tx.functions import get_odds
 from Bet_tx.whatsapp_twilio import send_message
