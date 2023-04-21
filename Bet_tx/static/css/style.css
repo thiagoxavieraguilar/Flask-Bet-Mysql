@@ -55,7 +55,11 @@ body {
     margin-bottom: 20px;
   }
 
-  button[type="submit"] {
+  button[type="submit"], button[type="reset"] {
+    display: inline-block;
+}
+
+button[type="submit"] {
     background-color: #1e5aa7;
     color: #fff;
     font-size: 18px;
@@ -64,11 +68,24 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-  }
+}
 
-  button[type="submit"]:hover {
+button[type="reset"] {
+    background-color: #1e5aa7;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover, button[type="reset"]:hover {
     background-color: #134580;
-  }
+}
+
 
   /* Added code for match boxes */
   .match-box {

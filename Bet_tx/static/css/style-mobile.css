@@ -1,0 +1,147 @@
+@media screen and (max-width: 768px) {
+
+    img[name="logo"] {
+        display: block;
+        margin: 0 auto;
+        width: 220px;
+        height: 200px;
+    }
+    body {
+        background-color: #152730;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .image-container img {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 10px;
+        background-color: #fff;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 24px;
+        color: #1e5aa7;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    h3 {
+        font-size: 18px;
+        color: #1e5aa7;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+    display: block;
+    }
+    
+    input[type="radio"] {
+        margin-right: 5px;
+        height: 16px;
+        width: 16px;
+    }
+    
+    input[type="text"] {
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #ddd;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    button[type="submit"],
+    button[type="reset"] {
+    display: inline-block;
+    }
+    
+    button[type="submit"] {
+        background-color: #1e5aa7;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    button[type="reset"] {
+        background-color: #1e5aa7;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        margin-right: 5px;
+    }
+    
+    button[type="submit"]:hover,
+    button[type="reset"]:hover {
+     background-color: #134580;
+    }
+    
+    /* Added code for match boxes */
+    .match-box {
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px #ccc;
+    }
+    
+    .match-box h3 {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+    
+    .match-box img {
+        margin: 0 5px;
+        max-width: 50px;
+        height: auto;
+    }
+    
+    .match-box label {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    
+    .match-box input[type="radio"] {
+        margin: 0;
+        height: 14px;
+        width: 14px;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .result {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #FFF;
+    }
+   
+    
+}

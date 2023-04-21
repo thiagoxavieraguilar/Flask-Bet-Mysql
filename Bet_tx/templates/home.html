@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="shortcut icon" href="\static\imgs\bet_ico2.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style-mobile.css" media="screen and (max-width: 768px)">
 
   </head>
   <body>
     <div class="image-container">
-      <img src="/static/imgs/logo_bet.png" alt="Logo" width="220" height="200">
-      <img src="/static/imgs/logo_bet.png" alt="Second Image" width="220" height="200">
-      <img src="/static/imgs/logo_bet.png" alt="thid Image" width="220" height="200">
+
+      <img name='logo'src="/static/imgs/logo_bet.png" alt="Second Image" width="350" height="300">
 
     </div>
     
@@ -50,11 +50,21 @@
           <input type="text" id="valor" name="valor">
           <br>
           <button type="submit">Enviar</button>
-          <script>
-        
+          
+         
+          <button type="reset" onclick="clear_button()">limpar</button>
 
+          <script>
+            function clear_button() {
+              var botoes = document.querySelectorAll('input[type="radio"]');
+              for(var i=0; i<botoes.length; i++) {
+                botoes[i].checked = false;
+              }
+            }
           </script>
+    
         </form>
+        
       </div>
     </div>
     <footer>

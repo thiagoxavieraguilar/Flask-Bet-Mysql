@@ -11,6 +11,7 @@ services:
         volumes: 
         - mysqlVolume:/var/lib/mysql
         - mysqlConfig:/etc/mysql
+        hostname: mysql
     
     bet_flask:
         build:
