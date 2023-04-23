@@ -11,15 +11,8 @@ services:
         volumes: 
         - mysqlVolume:/var/lib/mysql
         - mysqlConfig:/etc/mysql
-        hostname: mysql
     
-    bet_flask:
-        build:
-            context: .
-        ports:
-        - 3000:5000
-        depends_on: 
-            - mysqldb
+    
 
 volumes: 
     mysqlVolume:

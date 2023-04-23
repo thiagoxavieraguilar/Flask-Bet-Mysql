@@ -18,7 +18,7 @@ def create_app():
     app.config['SECRET_KEY'] = "blog"
     
     # Set the SQLAlchemy database URI
-    app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://root:root@mysqldb/{DB_NAME}"
+    app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://root:root@localhost/{DB_NAME}"
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
