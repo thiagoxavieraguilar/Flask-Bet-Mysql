@@ -20,9 +20,10 @@
     
 
     <div class="container">
+      
       <div class="row">
-        <!-- existing code -->
-      </div>
+        
+       <button id="button_show" onclick="toggleDiv()" style="display: inline-block">+</button> 
       <div class="row">
         <div class="col-12 col-md-6 offset-md-6" id="info-container">
           <!-- box for displaying selected options -->
@@ -66,73 +67,16 @@
           <button type="reset" onclick="clear_button()">limpar</button>
          <br>
          
-          <script>
-            function clear_button() {
-              var botoes = document.querySelectorAll('input[type="radio"]');
-              for(var i=0; i<botoes.length; i++) {
-                botoes[i].checked = false;
-              }
-              var infoDiv = document.getElementById('info-container');
-              infoDiv.innerHTML = '';
-            }
-            
-            var selectedOptions = {};
-            var opcoes = document.querySelectorAll('input[type="radio"]');
-            opcoes.forEach(function(opcao) {
-              opcao.addEventListener('change', function() {
-                // get the name of the match
-                var matchName = this.name;
-
-                // remove any previously selected options for this match
-                if (selectedOptions[matchName]) {
-                  selectedOptions[matchName].forEach(function(selectedOption) {
-                    selectedOption.checked = false;
-                  });
-                  delete selectedOptions[matchName];
-                }
-
-                // add the selected option to the selectedOptions object
-                selectedOptions[matchName] = [this];
-
-                // initialize the message for all matches
-                var mensagem = '';
-                for (var match in selectedOptions) {
-                  mensagem += '<h3>' + match + '</h3>';
-                  selectedOptions[match].forEach(function(selectedOption) {
-                    var valor = selectedOption.value;
-                    var partes = valor.split(",");
-                    var odds = partes[0];
-                    var resultado = partes[1];
-                    mensagem += '<p>Você selecionou ' + resultado + ' com odds de ' + odds + '</p>';
-                  });
-                }
-
-                // update the box on the right side of the page with the message for all matches
-                var infoDiv = document.getElementById('info-container');
-                infoDiv.innerHTML = mensagem;
-              });
-            });
-            
-    
-
-            function toggleDiv() {
-            var infoContainer = document.getElementById("info-container");
-            if (infoContainer.style.display === "none") {
-              infoContainer.style.display = "block";
-            } else {
-              infoContainer.style.display = "none";
-            }
-          }
-
-  
-          </script>
+          
         </form>    
       </div>
     </div>
-    <button onclick="toggleDiv()">Mostrar selecionados</button>
+    
     <footer>
       &copy; 2023 Thiago Xavier
     </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
   </body>
 </html>
   {% endblock %}

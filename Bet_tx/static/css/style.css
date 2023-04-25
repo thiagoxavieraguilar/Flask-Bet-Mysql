@@ -5,6 +5,11 @@ body {
     padding: 0;
   }
   
+  #buton_show {
+    float: right;
+    margin-right: 20px;
+  }
+  
   #info-container {
     position: fixed;
     left: 35%;
